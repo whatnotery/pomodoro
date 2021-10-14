@@ -1,12 +1,15 @@
 <script>
 
-    let num = 0;
+    let time = {
+        worktime : 0,
+        breaktime: 0
+     } 
 
-    function addTime() {
+    function addTime(num) {
         num += 5;
     }
 
-    function subTime() {
+    function subTime(num) {
         if (num !== 0) {
             num -= 5;
         } else {
@@ -16,12 +19,13 @@
 </script>
 
 <div>
-    <button on:click={addTime}> &bigtriangleup;</button> 
+    <button on:click={() => addTime(time.worktime)}> &bigtriangleup;</button> 
     <br>
-    <h2> {num} mins</h2>
+    <h2> {time.worktime} mins</h2>
     <br>
     <button on:click={subTime}> &bigtriangledown; </button>
 </div>
+
 
 <style>
     div {
