@@ -1,5 +1,5 @@
 <script>
-    export let timeType;
+
     let num = 0;
 
     function addTime() {
@@ -16,10 +16,6 @@
 </script>
 
 <div>
-    <h1>
-        {timeType}
-    </h1>
-    <br>
     <button on:click={addTime}> &bigtriangleup;</button> 
     <br>
     <h2> {num} mins</h2>

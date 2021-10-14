@@ -3,8 +3,7 @@
 </script>
 
 <section id="container">
-	<TimeSet timeType="work" />
-	<TimeSet timeType="break" />
+	<TimeSet/>
 </section>
 
 <style global lang="scss">
