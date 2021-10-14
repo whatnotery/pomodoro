@@ -1,15 +1,18 @@
 <script>
-	export let name;
+	import TimeSet from "./timeSet.svelte";
 </script>
+
+<section id="container">
+	<TimeSet timeType="work" />
+	<TimeSet timeType="break" />
+</section>
 
 <style global lang="scss">
 	@import "main.scss";
+
+	#container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
 </style>
-
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-
-	<button class="button is-primary">Button</button>
-</main>
-
