@@ -1,5 +1,5 @@
 <script>
-    let time = {
+   export let time = {
         workTime: 0,
         breakTime: 0,
     };
@@ -7,7 +7,7 @@
 
 <div>
     <button
-        on:click={(addTime) => {
+        on:click={() => {
             time.workTime += 5;
         }}
     >
@@ -17,7 +17,7 @@
     <h2>{time.workTime} mins</h2>
     <br />
     <button
-        on:click={(subTime) => {
+        on:click={() => {
             !time.workTime ? time.workTime : (time.workTime -= 5);
         }}
     >
@@ -27,7 +27,7 @@
 
 <div>
     <button
-        on:click={(addTime) => {
+        on:click={() => {
             time.breakTime += 5;
         }}
         disabled=""
@@ -38,7 +38,7 @@
     <h2>{time.breakTime} mins</h2>
     <br />
     <button
-        on:click={(subTime) => {
+        on:click={() => {
             !time.breakTime ? time.breakTime : (time.breakTime -= 5);
         }}
     >
