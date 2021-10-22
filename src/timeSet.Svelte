@@ -1,26 +1,49 @@
 <script>
-
-    let num = 0;
-
-    function addTime() {
-        num += 5;
-    }
-
-    function subTime() {
-        if (num !== 0) {
-            num -= 5;
-        } else {
-            num = 0;
-        }
-    }
+   export let time = {
+        workTime: 0,
+        breakTime: 0,
+    };
 </script>
 
 <div>
-    <button on:click={addTime}> &bigtriangleup;</button> 
-    <br>
-    <h2> {num} mins</h2>
-    <br>
-    <button on:click={subTime}> &bigtriangledown; </button>
+    <button
+        on:click={() => {
+            time.workTime += 5;
+        }}
+    >
+        &bigtriangleup;</button
+    >
+    <br />
+    <h2>{time.workTime} mins</h2>
+    <br />
+    <button
+        on:click={() => {
+            !time.workTime ? time.workTime : (time.workTime -= 5);
+        }}
+    >
+        &bigtriangledown;
+    </button>
+</div>
+
+<div>
+    <button
+        on:click={() => {
+            time.breakTime += 5;
+        }}
+        disabled=""
+    >
+        &bigtriangleup;</button
+    >
+    <br />
+    <h2>{time.breakTime} mins</h2>
+    <br />
+    <button
+        on:click={() => {
+            !time.breakTime ? time.breakTime : (time.breakTime -= 5);
+        }}
+    >
+        &bigtriangledown;
+    </button>
 </div>
 
 <style>
